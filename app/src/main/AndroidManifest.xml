@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="id.kotlin.training.coroutine.MovieApp"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +23,7 @@
             android:name="com.samsung.android.icon_container.has_icon_container"
             android:value="true" />
 
-        <activity android:name="id.kotlin.training.coroutine.MovieActivity">
+        <activity android:name="id.kotlin.training.coroutine.views.home.MovieActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
