@@ -11,7 +11,9 @@ import id.kotlin.training.coroutine.data.local.Movie
 import id.kotlin.training.coroutine.deps.provider.ApplicationProvider
 import id.kotlin.training.coroutine.ext.ItemDecoration
 import id.kotlin.training.coroutine.services.DiscoverMovieService
+import id.kotlin.training.coroutine.views.detail.DetailActivity
 import kotlinx.android.synthetic.main.activity_movie.*
+import org.jetbrains.anko.startActivity
 import javax.inject.Inject
 
 open class MovieActivity : AppCompatActivity(), MovieView {
@@ -89,5 +91,8 @@ open class MovieActivity : AppCompatActivity(), MovieView {
     }
 
     override fun onOpenMovieDetail(movie: Movie) {
+        startActivity<DetailActivity>(
+                "MOVIE" to movie
+        )
     }
 }

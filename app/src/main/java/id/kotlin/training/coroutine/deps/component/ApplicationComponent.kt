@@ -3,6 +3,7 @@ package id.kotlin.training.coroutine.deps.component
 import dagger.Component
 import id.kotlin.training.coroutine.deps.module.NetworkModule
 import id.kotlin.training.coroutine.deps.module.ServiceModule
+import id.kotlin.training.coroutine.views.detail.DetailActivity
 import id.kotlin.training.coroutine.views.home.MovieActivity
 import javax.inject.Singleton
 
@@ -14,4 +15,6 @@ import javax.inject.Singleton
 interface ApplicationComponent {
 
     fun inject(movieActivity: MovieActivity)
+
+    fun inject(detailActivity: DetailActivity)
 }
