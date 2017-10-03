@@ -18,7 +18,7 @@ class CoroutinesCallAdapterFactory private constructor(private val context: Coro
         }
     }
 
-    override fun get(returnType: Type?, annotations: Array<out Annotation>?, retrofit: Retrofit?): CallAdapter<*, *>? {
+    override fun get(returnType: Type, annotations: Array<out Annotation>?, retrofit: Retrofit?): CallAdapter<*, *>? {
         fun createInvalidReturnTypeException(): RuntimeException {
             return IllegalStateException("Return type must be parameterized as Deferred<Foo>, Deferred<out Foo>, " +
                     "Deferred<Response<Foo>> or Deferred<Response<out Foo>>")
